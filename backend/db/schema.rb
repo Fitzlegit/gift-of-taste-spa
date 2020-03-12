@@ -24,17 +24,15 @@ ActiveRecord::Schema.define(version: 2020_03_11_230205) do
     t.string "name"
     t.text "ingredients"
     t.text "directions"
-    t.string "story"
+    t.text "story"
     t.string "cook_time"
     t.string "prep_time"
     t.string "diet"
     t.string "category"
-    t.integer "cookbook_id_id", null: false
-    t.integer "user_id_id", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["cookbook_id_id"], name: "index_recipes_on_cookbook_id_id"
-    t.index ["user_id_id"], name: "index_recipes_on_user_id_id"
+    t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -46,6 +44,5 @@ ActiveRecord::Schema.define(version: 2020_03_11_230205) do
   end
 
   add_foreign_key "cookbooks", "users"
-  add_foreign_key "recipes", "cookbook_ids"
-  add_foreign_key "recipes", "user_ids"
+  add_foreign_key "recipes", "users"
 end
