@@ -17,11 +17,23 @@ users_name = [
   'Tyree'
 ]
 
-ingredients = []
+
+
 
 users_name.each do |name|
   User.create(username: name)
 end
+
+ingredients = []
+
+categories = [
+  'Snack',
+  'Breakfast',
+  'Lunch',
+  'Dinner',
+  'Dessert',
+  'Drinks'
+]
 
 User.all.each do |user|
   3.times do
@@ -36,6 +48,7 @@ User.all.each do |user|
       cook_time: rand(30..120).to_s + ' mins',
       prep_time: rand(30..120).to_s + ' mins',
       diet: Faker::Lorem.word,
+      category: categories.sample,
       user_id: user.id
     )
   end
