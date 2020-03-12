@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  ingredients: MyText
+  directions: MyText
+  story: MyString
+  cook_time: MyString
+  prep_time: MyString
+  diet: MyString
+  category: MyString
+  cookbook_id: one
+  user_id: one
+
+two:
+  name: MyString
+  ingredients: MyText
+  directions: MyText
+  story: MyString
+  cook_time: MyString
+  prep_time: MyString
+  diet: MyString
+  category: MyString
+  cookbook_id: two
+  user_id: two
