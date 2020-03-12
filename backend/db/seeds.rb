@@ -5,3 +5,38 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+User.delete_all
+Recipe.delete_all
+
+users_name = [
+  'Jackie',
+  'Earl',
+  'Ariel',
+  'Tyree'
+]
+
+ingredients = []
+
+users_name.each do |name|
+  User.create(username: name)
+end
+
+User.all.each do |user|
+  3.times do
+    6.times do
+      ingredients << Faker::Food.unique.ingredient
+    end
+    Recipe.create(
+      name: Faker::Food.unique.dish,
+      ingredients: ingredients,
+      directions: Faker::Lorem.paragraph,
+      story: Faker::Food.description,
+      cook_time: rand(30..120).to_s + ' mins',
+      prep_time: rand(30..120).to_s + ' mins',
+      diet: Faker::Lorem.word,
+      user_id: user.id
+    )
+  end
+end
