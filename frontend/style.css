@@ -4,8 +4,44 @@
     display: flex;
     align-items: stretch
     min-height: 100vh;
+
 }
 
-.menu-toggle {
-  display: none;
+/* header */
+
+header {
+  font-size: 75px;
+  color: orange;
+  margin-left: 10vh;
+  text-shadow: 1px 1px 1px #000;
+  font-family: 'Dynalight'
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: none;
+  margin-left: 4vh;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #0066ff;
+  /* text-align: center; */
+  padding: 0px 3px;
+  padding-bottom: 10vh;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: none;
+  text-decoration: none;
+  color: #E936A7;
+}
+
+.topnav ul {
+
 }
