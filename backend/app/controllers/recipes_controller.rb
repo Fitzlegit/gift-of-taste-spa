@@ -1,25 +1,25 @@
 class RecipesController < ApplicationController
   def index
     recipes = Recipe.all
-    render json: recipes
+    render json: RecipeSerializer.new(recipes)
   end
 
   def show
     recipe = Recipe.find_by(params[:id])
-    render json: recipe
+    render json: RecipeSerializer.new(recipe)
   end
 
   def create
     recipe = Recipe.new(recipe_params)
     recipe.save
-    render json: recipe
+    render json: RecipeSerializer.new(newRecipe)
   end
 
   def update
     recipe = find_by(params[:id])
     recipe.update(recipe_params)
     recipe.save
-    render json: recipe
+    render json: RecipeSerializer.new(updateRecipe)
   end
 
   def destroy
