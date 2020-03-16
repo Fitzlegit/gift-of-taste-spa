@@ -24,7 +24,7 @@ users_name.each do |name|
   User.create(username: name)
 end
 
-ingredients = []
+ingredientsA = []
 
 categories = [
   'Snack',
@@ -38,8 +38,9 @@ categories = [
 User.all.each do |user|
   3.times do
     6.times do
-      ingredients << Faker::Food.unique.ingredient
+      ingredientsA << Faker::Food.unique.ingredient
     end
+    ingredients = ingredientsA.join(", ")
     Recipe.create(
       name: Faker::Food.unique.dish,
       ingredients: ingredients,
