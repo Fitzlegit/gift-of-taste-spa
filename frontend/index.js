@@ -1,15 +1,4 @@
-// hamburger menu
-// Select all the elements that use a specified distinguisher.
-const menuTriggers = document.querySelectorAll("[data-menu-toggle]");
+const recipeAdapter = new RecipesAdapter("http://localhost:3000/recipes")
 
-// for each element, add a listener for the 'click' event.
-Array.prototype.forEach.apply(menuTriggers, [
-  function(trigger) {
-    trigger.addEventListener('click', function(e) {
-      e.preventDefault() // prevent default link behavior
 
-      // Toggle the sidebar when a click is detected.
-      toggleSidebar(); // this function will be defined later
-    });
-  }
-]);
+recipeAdapter.fetchRecipes()
