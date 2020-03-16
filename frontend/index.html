@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gift of Taste</title>
 
-    <!-- stylesheet -->
+    <!-- stylesheets -->
     <link rel="stylesheet" href="style.css">
+    <!-- google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Dynalight' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -20,14 +23,23 @@
     <![endif]-->
   </head>
   <body>
+    <header>
+    <span id="title">Gift of Taste</span>
+    </header>
     <div class="wrapper">
-      <div class="sidebar">
+      <div id="menu" class="topnav">
+        <ul>
+          <a href="#">Home |</a>
+          <a href="#">My Recipes |</a>
+          <a href="#">New Recipe |</a>
+          <a href="#">All Recipes </a>
 
+        </ul>
       </div> <!-- sidebar -->
     </div> <!-- wrapper -->
 
-    <div class="main-content">
-      <button class="menu-toggle">Show Menu</button>
+    <div id="main" class="main-content">
+
     </div> <!-- main-content -->
 
 
@@ -39,6 +51,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="index.js"></script>
+    <script type="text/javascript" src="recipe.js"></script>
+    <script type="text/javascript" src="recipesAdapter.js"></script>
+    <script type="text/javascript" src="index.js"></script>
   </body>
 </html>
