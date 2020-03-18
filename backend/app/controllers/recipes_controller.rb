@@ -10,15 +10,15 @@ class RecipesController < ApplicationController
   end
 
   def create
-    recipe = Recipe.new(recipe_params)
-    recipe.save
+    newRecipe = Recipe.new(recipe_params)
+    newRecipe.save
     render json: RecipeSerializer.new(newRecipe)
   end
 
   def update
-    recipe = find_by(params[:id])
-    recipe.update(recipe_params)
-    recipe.save
+    updateRecipe = find_by(params[:id])
+    updateRecipe.update(recipe_params)
+    updateRecipe.save
     render json: RecipeSerializer.new(updateRecipe)
   end
 
