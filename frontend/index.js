@@ -25,9 +25,19 @@ function handleFormSubmit(event){
     let inputs = formDiv.querySelectorAll('input')
     let select = formDiv.querySelector('select')
     let newRecipeObj = {
+      name: inputs[0].value,
+      prep_time: inputs[1].value,
+      cook_time: inputs[2].value,
+      category: select[0].value,
+      diet: select[1].value,
+      story: document.getElementById('story').value,
+      ingredients: document.getElementById('ingredients').value,
+      directions: document.getElementById('directions').value,
+      user_id: inputs[3].value
 
     }
-    recipesAdapter.newRecipe(newRecipeObj)
+    console.log(newRecipeObj)
+    recipeAdapter.newRecipe(newRecipeObj)
   }
 }
 
@@ -62,6 +72,8 @@ function renderNewRecipeForm(){
           <input type="number" style="width: 4em;">
           <label>minutes</label>
           <br><br>
+          user_id: <input type="text" value="1" style="padding-right: 36px;"/>
+          <br><br>
           <label for="">Category: </label>
           <select>
             <option value="snack">Snack</option>
@@ -82,20 +94,19 @@ function renderNewRecipeForm(){
           <br><br>
           <label for="" style="float: right">Story: </label>
           <br><br>
-          <textarea rows="8" cols="83">Tell us all about this food story!</textarea>
+          <textarea id='story' rows="8" cols="83">Tell us all about this food story!</textarea>
           <br><br>
           <label for="" style="float: right;">Ingredients: </label>
           <br><br>
-          <textarea rows="8" cols="83">We're heading to the store for ingredients now!</textarea>
+          <textarea id='ingredients' rows="8" cols="83">We're heading to the store for ingredients now!</textarea>
           <br><br>
           <label for="" style="float: right;">Directions: </label>
           <br><br>
-          <textarea rows="8" cols="83">Let us know your secret!</textarea>
+          <textarea id='directions' rows="8" cols="83">Let us know your secret!</textarea>
           <br><br
-          <button>Create Recipe</button>
-          <br><br>
         </div>
       </div>
+      <button>Create Recipe</button>
     </div>
   <section>
   `
