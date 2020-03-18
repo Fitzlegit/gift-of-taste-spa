@@ -19,6 +19,8 @@ gem 'puma', '~> 4.1'
 gem 'faker'
 # Use fast_jsonapi serializes data
 gem 'fast_jsonapi'
+# Use rack-cors to allow HTTP request
+gem 'rack-cors', :require => 'rack/cors'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
