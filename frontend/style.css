@@ -45,3 +45,22 @@ header {
 .topnav ul {
 
 }
+
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+/*--- recipe form ---*/
+.recipe-form {
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-right: 200px;
+  float: right;
+  background: transparent;
+  color: orange;
+  font-size: 18px;
+  text-shadow: 1px 1px 1px #000;
+  font-family: 'Oswald', sans-serif;
+}
