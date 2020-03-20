@@ -5,7 +5,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-    recipe = Recipe.find_by(params[:id])
+    recipe = Recipe.find_by(id: params[:id])
     render json: RecipeSerializer.new(recipe)
   end
 
@@ -16,14 +16,14 @@ class RecipesController < ApplicationController
   end
 
   def update
-    updateRecipe = find_by(params[:id])
+    updateRecipe = find_by(id: params[:id])
     updateRecipe.update(recipe_params)
     updateRecipe.save
     render json: RecipeSerializer.new(updateRecipe)
   end
 
   def destroy
-    recipe = Recipe.find_by(params[:id])
+    recipe = Recipe.find_by(id: params[:id])
     recipe.delete
   end
 
