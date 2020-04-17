@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   def create
     user = User.new(user_params)
     user.save
-    rander json: user
+    render json: user
   end
 
   def show; end
